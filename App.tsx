@@ -8,14 +8,19 @@ import {
   trustWallet,
   useAddress,
   walletConnect,
-} from "@thirdweb-dev/react-native";
-import React from "react";
-import { SafeAreaView, StyleSheet, Text, useColorScheme, View } from "react-native";
-import { Colors } from "react-native/Libraries/NewAppScreen";
+} from '@thirdweb-dev/react-native';
+import React from 'react';
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  useColorScheme,
+  View,
+} from 'react-native';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 import NFT from './components/NFT';
 
 const App = () => {
-
   return (
     <ThirdwebProvider
       activeChain='mumbai'
@@ -48,7 +53,7 @@ const App = () => {
 
 const AppInner = () => {
   const address = useAddress();
-  const isDarkMode = useColorScheme() === "dark";
+  const isDarkMode = useColorScheme() === 'dark';
 
   const textStyles = {
     color: isDarkMode ? Colors.white : Colors.black,
@@ -60,7 +65,7 @@ const AppInner = () => {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeAreaView style={backgroundStyle} >
       <View style={styles.view}>
         <ConnectWallet />
         {address ? <Text>Welcome!</Text> : <NFT />}
@@ -71,15 +76,15 @@ const AppInner = () => {
 
 const styles = StyleSheet.create({
   view: {
-    height: "100%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    alignContent: "center",
+    height: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignContent: 'center',
   },
   heading: {
     fontSize: 24,
-    fontWeight: "bold",
+    fontWeight: 'bold',
     marginBottom: 20,
   },
 });
