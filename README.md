@@ -1,4 +1,4 @@
-# A web3 App where  users can claim an Nft 
+# claimNFTApp is a Web3 mobile app built with mobile SDK. Users can connect their wallets and claim NFTs
 
 # React Native + thirdweb + TypeScript Starter Template
 
