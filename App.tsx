@@ -68,7 +68,7 @@ const AppInner = () => {
     <SafeAreaView style={backgroundStyle} >
       <View style={styles.view}>
         <ConnectWallet />
-        {address ? <Text>Welcome!</Text> : <NFT />}
+        {!address ? <Text>Welcome!</Text> : <NFT />}
       </View>
     </SafeAreaView>
   );

@@ -22,7 +22,7 @@ const NFT = () => {
         <Text style={styles.title}>{nft?.metadata.name}</Text>
         <Image style={styles.nftImage} source={{ uri: nftImage?.toString() }} />
         <Text style={styles.text}>
-          <Text>You own:</Text>
+          <Text>You own: </Text>
           <Text>{isLoading ? '0' : nftBalance?.toString()}</Text>
         </Text>
         <Web3Button
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
   },
   text: { fontSize: 24, marginBottom: 20 },
   nftImage: {
-    height: 450,
+    height: 420,
     width: 300,
     marginBottom: 10,
     borderRadius: 6,
@@ -65,6 +65,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     paddingLeft: 20,
     paddingRight: 20,
-    paddingTop: 20,
+    paddingTop: 10,
   },
 });
